@@ -1,9 +1,26 @@
-import './App.css'
+import './App.css';
+import About from './components/about/about';
+import Header from './components/header/header';
+import Projects from './components/projects/projects';
+import ThankYou from './components/thankyou/thankyou';
 
 export default function App() {
-  return (
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-  )
+   const name = 'Luke Holland';
+   const descriptors = [
+      'Problem-solver',
+      'Collaborative',
+      'Detail-oriented',
+      'Results-driven',
+      'Excellent communicator',
+      'Software Engineer',
+   ];
+
+   return (
+      <>
+         <Header name={name} descriptors={descriptors} />
+         <About />
+         <Projects />
+         <ThankYou />
+      </>
+   );
 }
