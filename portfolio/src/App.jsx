@@ -1,5 +1,6 @@
 import './App.css';
 import About from './components/about/about';
+import CreatedUsing from './components/createdusing/createdusing';
 import Header from './components/header/header';
 import Projects from './components/projects/projects';
 import ThankYou from './components/thankyou/thankyou';
@@ -14,6 +15,7 @@ export default function App() {
       'Excellent communicator',
       'Software Engineer',
    ];
+   const languages = ['React', 'TypeScript', 'TailwindCSS', 'FontAwesome'];
 
    return (
       <>
@@ -21,6 +23,7 @@ export default function App() {
          <About />
          <Projects />
          <ThankYou />
+         <CreatedUsing languages={languages} />
       </>
    );
 }

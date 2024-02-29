@@ -17,7 +17,8 @@ const ThankYou: React.FC = () => {
                >
                   lukeholland15500@gmail.com
                </a>{' '}
-               or connect with me on any of the platforms listed on the site.
+               or connect with me on any of the platforms listed at the top of
+               the site!
             </p>
          </div>
       </div>
