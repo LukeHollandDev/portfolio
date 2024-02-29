@@ -24,6 +24,7 @@ export default function App() {
          <Projects />
          <ThankYou />
          <CreatedUsing languages={languages} />
+         <br />
       </>
    );
 }
