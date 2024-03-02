@@ -123,7 +123,7 @@ const Projects: React.FC = () => {
    const [projects, setProjects] = useState(allProjects.slice(0, 4));
 
    return (
-      <div className="py-2 fade-in anim-delay-2000">
+      <div className="py-2 fade-in anim-delay-2400">
          <h2 className="text-xl">Projects</h2>
          <div className="flex flex-wrap">
             {projects.map((project, index) => (

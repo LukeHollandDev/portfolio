@@ -2,7 +2,7 @@ import React from 'react';
 
 const ThankYou: React.FC = () => {
    return (
-      <div className="fade-in anim-delay-2400 py-2">
+      <div className="fade-in anim-delay-2800 py-2">
          <div className="max-w-3xl mx-auto px-4">
             <p className="text-center text-lg">
                Thank you for visiting my portfolio. If you have any questions or

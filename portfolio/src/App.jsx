@@ -3,6 +3,7 @@ import About from './components/about/about';
 import CreatedUsing from './components/createdusing/createdusing';
 import Header from './components/header/header';
 import Projects from './components/projects/projects';
+import Technologies from './components/technologies/technologies';
 import ThankYou from './components/thankyou/thankyou';
 
 export default function App() {
@@ -21,6 +22,7 @@ export default function App() {
       <>
          <Header name={name} descriptors={descriptors} />
          <About />
+         <Technologies />
          <Projects />
          <ThankYou />
          <CreatedUsing languages={languages} />

@@ -37,6 +37,10 @@
    animation-delay: 2800ms !important;
 }
 
+.anim-delay-3200 {
+   animation-delay: 3200ms !important;
+}
+
 .fade-in {
    opacity: 0;
    animation: fadeInAnimation ease 1s;

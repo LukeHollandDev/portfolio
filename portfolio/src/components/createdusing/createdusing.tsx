@@ -8,7 +8,7 @@ const CreatedUsing: React.FC<CreatedUsingProps> = ({
    languages,
 }: CreatedUsingProps) => {
    return (
-      <div className="fade-in anim-delay-2800 flex flex-wrap justify-center gap-2">
+      <div className="fade-in anim-delay-3200 flex flex-wrap justify-center gap-2">
          <p className="flex items-center">Created using:</p>
          <div className="flex gap-1">
             {languages.map((language, index) => (
