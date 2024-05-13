@@ -1,7 +1,13 @@
 import "./App.css";
+import Banner from "./components/Banner/Banner";
 
 function App() {
-  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+  return (
+    <>
+      <Banner />
+      <main className="mb-4">Content here</main>
+    </>
+  );
 }
 
 export default App;

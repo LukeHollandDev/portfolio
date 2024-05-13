@@ -1,30 +1,41 @@
-# React + TypeScript + Vite
+# Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This part contains the source code for the portfolio website.
 
-Currently, two official plugins are available:
+## Technology
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- TypeScript
+- Vite
+- React
+- Jest
 
-## Expanding the ESLint configuration
+## Setup
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Running website locally:
 
-- Configure the top-level `parserOptions` property like this:
+1. Clone repository
+2. Navigate into the code directory: `cd portfolio`
+3. Install dependencies: `npm install`
+4. Run the dev server: `npm run dev`
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+To build the website (outputs to `portfolio/dist`):
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+1. Navigate into the code directory: `cd portfolio`
+2. Install dependencies: `npm install`
+3. Run the build command: `npm run build`
+
+To test the website:
+
+1. Navigate into the code directory: `cd portfolio`
+2. Install dependencies: `npm install`
+3. Run the tests: `npm run test`
+
+## Tests
+
+The tests are done using Jest through the `@testing-library/react` module.
+
+The `jest.config.js`, `jest.setup.ts` and `styleMock.js` files all related to testing.
+
+- The `styleMock.js` is used so importing CSS can be handled and mocked when testing.
+
+In each component there is also a `*.spec.tsx` which contains the test for the specific component.
