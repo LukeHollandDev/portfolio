@@ -10,7 +10,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      # Checkout the repository
+      - uses: actions/checkout@v4
 
       # Install dependencies
       - name: Install dependencies
@@ -22,7 +23,7 @@ jobs:
 
       # Upload build folder for the deploy job
       - name: Upload build folder
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: build
           path: portfolio/dist/
@@ -33,19 +34,17 @@ jobs:
     needs: build
 
     steps:
-      - uses: actions/checkout@v2
-
       # Download the build folder
       - name: Download build folder
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4
         with:
           name: build
           path: portfolio/dist/
 
       # Deploy to github pages website
-      - uses: JamesIves/github-pages-deploy-action@4.1.5
+      - uses: JamesIves/github-pages-deploy-action@v4
         with:
-          repository-name: AmazonPriime/amazonpriime.github.io
+          repository-name: LukeHollandDev/LukeHollandDev.github.io
           branch: main
           folder: portfolio/dist/
           target-folder: .
