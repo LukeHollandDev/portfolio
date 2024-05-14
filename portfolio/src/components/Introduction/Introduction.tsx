@@ -8,7 +8,7 @@ function Introduction() {
           <img
             src="/me.jpg"
             alt="Picture of me on a hike in Dumbarton."
-            title="Picture of me on a hike in Dumbarton."
+            title="Me on a hike in Dumbarton"
             className="rounded-full image-border w-64"
           />
           <a
@@ -19,7 +19,7 @@ function Introduction() {
             <img
               src="/barclays_logo.png"
               alt="Barclays logo."
-              title="Barlcays logo."
+              title="Barlcays"
               className="max-w-16 bottom-0 p-2 absolute rounded-full image-border"
             />
           </a>

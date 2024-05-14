@@ -1,0 +1,92 @@
+[
+    {
+        "name": "Python",
+        "url": "https://www.python.org/",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
+    },
+    {
+        "name": "Java",
+        "url": "https://www.java.com/en/",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"
+    },
+    {
+        "name": "TypeScript",
+        "url": "https://www.typescriptlang.org/",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
+    },
+    {
+        "name": "C++",
+        "url": "https://cplusplus.com/",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg"
+    },
+    {
+        "name": "Swift",
+        "url": "https://developer.apple.com/swift/",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/swift/swift-original.svg"
+    },
+    {
+        "name": "Dart",
+        "url": "https://darklang.com/",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dart/dart-original.svg"
+    },
+    {
+        "name": "MySQL",
+        "url": "https://www.mysql.com/",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg"
+    },
+    {
+        "name": "PostgreSQL",
+        "url": "https://www.postgresql.org/",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg"
+    },
+    {
+        "name": "React",
+        "url": "https://react.dev/",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
+    },
+    {
+        "name": "React Native",
+        "url": "https://reactnative.dev/",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
+    },
+    {
+        "name": "Angular",
+        "url": "https://angular.io/",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg"
+    },
+    {
+        "name": "NextJS",
+        "url": "https://nextjs.org/",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg"
+    },
+    {
+        "name": "FastAPI",
+        "url": "https://fastapi.tiangolo.com/",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg"
+    },
+    {
+        "name": "Docker",
+        "url": "https://www.docker.com/",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg"
+    },
+    {
+        "name": "Jenkins",
+        "url": "https://www.jenkins.io/",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jenkins/jenkins-original.svg"
+    },
+    {
+        "name": "GitHub",
+        "url": "https://github.com/",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
+    },
+    {
+        "name": "GitLab",
+        "url": "https://gitlab.com/",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gitlab/gitlab-original.svg"
+    },
+    {
+        "name": "AWS",
+        "url": "https://aws.amazon.com/",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
+    }
+]
