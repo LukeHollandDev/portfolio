@@ -1,7 +1,8 @@
 import "./App.css";
 import Banner from "./components/Banner/Banner";
 import Introduction from "./components/Introduction/Introduction";
-import { Technology } from "./components/Technology/Technoloy";
+import { Projects } from "./components/Projects/Projects";
+import { Technology } from "./components/Technology/Technology";
 import TechnologyData from "./data/Technology.json";
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
       <main className="max-w-screen-lg m-auto p-4 *:mb-8">
         <Introduction />
         <Technology technologies={TechnologyData} />
+        <Projects />
       </main>
     </>
   );

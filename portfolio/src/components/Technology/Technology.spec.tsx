@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import { Technology } from "./Technoloy";
+import { Technology } from "./Technology";
 
 const mockProps = [
   {
