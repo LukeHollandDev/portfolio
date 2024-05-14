@@ -39,6 +39,18 @@ export function Technology({ technologies }: TechnologyProps) {
         The following technologies are ones I am familiar with and have used my
         professional work and my personal projects.
       </p>
+      <p className="text-sm italic">
+        Thank you to{" "}
+        <a
+          className="link"
+          href="https://devicon.dev/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Devicon
+        </a>{" "}
+        for the icons!
+      </p>
       <div className="flex flex-wrap gap-2 mt-4">
         {technologies.map((technology: TechnologyItem) => (
           <TechnologyIcon key={technology.name} technology={technology} />
