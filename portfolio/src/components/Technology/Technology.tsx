@@ -6,10 +6,6 @@ export interface TechnologyItem {
   icon: string;
 }
 
-export interface TechnologyProps {
-  technologies: TechnologyItem[];
-}
-
 export function TechnologyIcon({ technology }: { technology: TechnologyItem }) {
   return (
     <div
@@ -28,7 +24,11 @@ export function TechnologyIcon({ technology }: { technology: TechnologyItem }) {
   );
 }
 
-export function Technology({ technologies }: TechnologyProps) {
+export function Technology({
+  technologies,
+}: {
+  technologies: TechnologyItem[];
+}) {
   if (!technologies) {
     return <div>No technologies...</div>;
   }
