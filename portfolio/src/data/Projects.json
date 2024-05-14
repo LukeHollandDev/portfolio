@@ -1,0 +1,9 @@
+[
+    {
+        "name": "Freezer ID",
+        "description": "Freezer ID is a sleek website which allows users to itemise the meals they have in their freezer to help them keep track of what is in the freezer. I currently use the website daily as we like to cook our meals and often have leftovers we freeze.",
+        "image": "/project_freezer-id.png",
+        "url": "https://freezer.lukeholland.dev/",
+        "technology": ["NextJS","React","TypeScript","PostgreSQL","Docker"]
+    }
+]
