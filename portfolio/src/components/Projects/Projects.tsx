@@ -11,6 +11,33 @@ export interface Project {
   technology: string[];
 }
 
+const ProjectDetails = ({ project }: { project: Project }) => {
+  return (
+    <div className="col-span-6 p-4">
+      <h3 className="text-lg sm:text-xl md:text-2xl font-semibold">
+        {project.name}
+      </h3>
+      <p>{project.description}</p>
+      <p className="mt-2">
+        <a href={project.url} target="_blank" rel="noopener noreferrer">
+          <FontAwesomeIcon icon={faSquareArrowUpRight} size="xl" />{" "}
+          {project.url}
+        </a>
+      </p>
+      <div className="flex flex-wrap gap-2 mt-2">
+        {project.technology.map((technology) => (
+          <p
+            key={`${project.name}_${technology}`}
+            className="project-technology p-1 rounded font-semibold"
+          >
+            {technology}
+          </p>
+        ))}
+      </div>
+    </div>
+  );
+};
+
 export function Projects({ projects }: { projects: Project[] }) {
   return (
     <div>
@@ -32,28 +59,17 @@ export function Projects({ projects }: { projects: Project[] }) {
         to see all of my open source projects!
       </p>
       <div className="mt-4">
-        {projects.map((project: Project) => (
-          <div className="project grid grid-cols-12 rounded">
-            <img src={project.image} className="col-span-6" />
-            <div className="col-span-6 p-4">
-              <h3 className="text-lg sm:text-xl md:text-2xl font-semibold">
-                {project.name}
-              </h3>
-              <p>{project.description}</p>
-              <p className="mt-2">
-                <a href={project.url} target="_blank" rel="noopener noreferrer">
-                  <FontAwesomeIcon icon={faSquareArrowUpRight} size="xl" />{" "}
-                  {project.url}
-                </a>
-              </p>
-              <div className="flex flex-wrap gap-2 mt-2">
-                {project.technology.map((technology) => (
-                  <p className="project-technology p-1 rounded font-semibold">
-                    {technology}
-                  </p>
-                ))}
-              </div>
-            </div>
+        {projects.map((project: Project, index) => (
+          <div key={project.name} className="project grid grid-cols-12 rounded">
+            {index % 2 === 0
+              ? [
+                  <img src={project.image} className="col-span-6" />,
+                  <ProjectDetails project={project} />,
+                ]
+              : [
+                  <ProjectDetails project={project} />,
+                  <img src={project.image} className="col-span-6" />,
+                ]}
           </div>
         ))}
       </div>

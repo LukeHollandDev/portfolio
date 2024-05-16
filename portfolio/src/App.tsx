@@ -6,6 +6,7 @@ import { Technology } from "./components/Technology/Technology";
 import socialData from "./data/Social.json";
 import technologyData from "./data/Technology.json";
 import projectsData from "./data/Projects.json";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Technology technologies={technologyData} />
         <Projects projects={projectsData} />
       </main>
+      <Footer socialData={socialData} />
     </>
   );
 }
