@@ -6,7 +6,7 @@ function Introduction() {
       <div className="col-span-12 sm:col-span-3">
         <div className="relative">
           <img
-            src="/me.jpg"
+            src="/portfolio-assets/me.jpg"
             alt="Picture of me on a hike in Dumbarton."
             title="Me on a hike in Dumbarton"
             className="rounded-full image-border w-64"
@@ -17,7 +17,7 @@ function Introduction() {
             rel="noopener noreferrer"
           >
             <img
-              src="/barclays_logo.png"
+              src="/portfolio-assets/barclays_logo.png"
               alt="Barclays logo."
               title="Barlcays"
               className="max-w-16 bottom-0 p-2 absolute rounded-full image-border"
