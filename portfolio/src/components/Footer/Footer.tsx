@@ -1,3 +1,4 @@
+import { getEnvValue } from "../../util/util";
 import { Social, SocialProps } from "../Social/Social";
 import "./Footer.css";
 
@@ -9,8 +10,8 @@ function Footer({ socialData }: { socialData: SocialProps }) {
         checkout my social links.
       </p>
       <Social {...socialData} />
-      {import.meta.env.VITE_LAST_UPDATED ? (
-        <p className="mt-2 text-sm">Website last updated {import.meta.env.VITE_LAST_UPDATED}.</p>
+      {getEnvValue("VITE_LAST_UPDATED") ? (
+        <p className="mt-2 text-sm">Website last updated {getEnvValue("VITE_LAST_UPDATED")}.</p>
       ) : null}
     </div>
   );

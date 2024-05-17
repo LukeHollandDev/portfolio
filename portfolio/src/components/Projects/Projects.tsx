@@ -66,7 +66,7 @@ export function Projects({ projects }: { projects: Project[] }) {
         to see all of my open source projects!
       </p>
       <div className="mt-4">
-        {projects.map((project: Project, index) => (
+        {projects ? projects.map((project: Project, index) => (
           <div key={project.name} className="project grid grid-cols-12 rounded">
             {index % 2 === 0
               ? [
@@ -78,7 +78,7 @@ export function Projects({ projects }: { projects: Project[] }) {
                 <img src={project.image} className="col-span-6" />,
               ]}
           </div>
-        ))}
+        )) : <p>Looks like there is no projects here.</p>}
       </div>
     </div>
   );
