@@ -1,0 +1,29 @@
+name: Continuous Integration
+
+# Run everytime there's a push
+on: push
+
+jobs:
+  integration:
+    name: Continuous Integration Pipeline
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the repository
+      - uses: actions/checkout@v4
+
+      # Install dependencies
+      - name: Install dependencies
+        run: cd portfolio && npm install
+
+      # Lint the project
+      - name: Lint
+        run: cd portfolio && npm run lint
+
+      # Test the project
+      - name: Test
+        run: cd portfolio && npm run test
+
+      # Build the project
+      - name: Build
+        run: cd portfolio && npm run build

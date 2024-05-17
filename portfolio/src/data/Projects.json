@@ -1,0 +1,44 @@
+[
+    {
+        "name": "Freezer ID",
+        "description": "Freezer ID is a sleek website which allows users to itemise the meals they have in their freezer to help them keep track of what is in the freezer. I currently use the website daily as we like to cook our meals and often have leftovers we freeze.",
+        "image": "/project_freezer-id.png",
+        "url": "https://freezer.lukeholland.dev",
+        "technology": [
+            "NextJS",
+            "React",
+            "TypeScript",
+            "Prisma",
+            "PostgreSQL",
+            "Docker"
+        ]
+    },
+    {
+        "name": "Recipe Website",
+        "description": "Recipe Website is a simple recipe repository which brings together recipes from a variety of sources. The website allows users to find and view recipes, which includes ingredient lists and instructions, they can also sign up and keep track of their favourite recipes!",
+        "image": "/project_recipe_website.png",
+        "url": "https://recipes.lukeholland.dev",
+        "technology": [
+            "React",
+            "TypeScript",
+            "FastAPI",
+            "Python",
+            "Alembic",
+            "PostgreSQL",
+            "Docker"
+        ]
+    },
+    {
+        "name": "Algorithm Animator",
+        "description": "Algorithm Animator was developed for my final year project at University of Glasgow, it was designed to help students learn graph algorithms by allowing them to create graphs and watch an animation of a graph algorithm.",
+        "image": "/project_algorithm_animator.png",
+        "url": "https://lukeholland.dev/university_project",
+        "source": "https://github.com/LukeHollandDev/algorithm-animator",
+        "technology": [
+            "React",
+            "JavaScript",
+            "Cytoscape",
+            "Bootstrap"
+        ]
+    }
+]
