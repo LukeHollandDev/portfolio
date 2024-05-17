@@ -1,12 +1,15 @@
 name: Continuous Deployment
 
 on:
-  workflow_run:
-    workflows: ["Continuous Integration"]
-    types:
-      - completed
+  push:
     branches:
       - main
+  # workflow_run:
+  #   workflows: ["Continuous Integration"]
+  #   types:
+  #     - completed
+  #   branches:
+  #     - main
 
 jobs:
   build:
@@ -48,6 +51,12 @@ jobs:
           name: build
           path: portfolio/dist/
 
+      - name: List worktrees
+        run: /usr/bin/git worktree list
+
+      - name: Test git checkout
+        run: /usr/bin/git checkout -B main origin/main
+
       # Deploy to github pages website
       - uses: JamesIves/github-pages-deploy-action@v4
         with:
@@ -56,4 +65,4 @@ jobs:
           folder: portfolio/dist/
           target-folder: .
           clean: false
-          # token: ${{ secrets.PAT }}
+          token: ${{ secrets.PAT }}
