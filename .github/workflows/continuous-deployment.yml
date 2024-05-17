@@ -23,7 +23,7 @@ jobs:
 
       # Build the project
       - name: Build project
-        run: cd portfolio && VITE_LAST_UPDATED=$(date '+%Y-%m-%d %H:%M:%S') npm run build
+        run: cd portfolio && VITE_LAST_UPDATED=$(date '+%Y-%m-%d %H:%M:%S %z') npm run build
 
       # Upload build folder for the deploy job
       - name: Upload build folder
