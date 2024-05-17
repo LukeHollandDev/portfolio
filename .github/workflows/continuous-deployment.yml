@@ -49,7 +49,7 @@ jobs:
       # Deploy to github pages website
       - uses: JamesIves/github-pages-deploy-action@v4
         with:
-          repository-name: LukeHollandDev/LukeHollandDev.github.io
+          repository-name: LukeHollandDev/Test
           branch: main
           folder: portfolio/dist/
           target-folder: .
