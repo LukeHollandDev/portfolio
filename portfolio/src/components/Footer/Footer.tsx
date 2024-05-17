@@ -1,8 +1,10 @@
-import { getEnvValue } from "../../util/util";
+import { getEnvValue, getRelativeTime } from "../../util/util";
 import { Social, SocialProps } from "../Social/Social";
 import "./Footer.css";
 
 function Footer({ socialData }: { socialData: SocialProps }) {
+  const timestamp = getEnvValue("VITE_LAST_UPDATED");
+
   return (
     <div className="footer text-center py-8 px-4">
       <p>
@@ -10,8 +12,14 @@ function Footer({ socialData }: { socialData: SocialProps }) {
         checkout my social links.
       </p>
       <Social {...socialData} />
-      {getEnvValue("VITE_LAST_UPDATED") ? (
-        <p className="mt-2 text-sm">Website last updated {getEnvValue("VITE_LAST_UPDATED")}.</p>
+      {timestamp ? (
+        <p className="mt-2 text-sm">
+          Website last updated{" "}
+          <a href="https://github.com/LukeHollandDev/portfolio" className="underline" target="_blank" rel="noopener noreferrer">
+            {getRelativeTime(timestamp)}
+          </a>
+          .
+        </p>
       ) : null}
     </div>
   );
