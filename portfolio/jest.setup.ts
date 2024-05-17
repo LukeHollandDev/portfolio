@@ -9,4 +9,5 @@ jest.mock("./src/util/util", () => ({
         }
         return null;
     }),
+    getRelativeTime: jest.fn(() => "1 day ago.")
 }));
