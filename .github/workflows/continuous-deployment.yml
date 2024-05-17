@@ -33,7 +33,6 @@ jobs:
     name: Deploy Project
     runs-on: ubuntu-latest
     needs: build
-    concurrency: ci-${{ github.ref }}
 
     steps:
       # Checkout the repository
@@ -49,7 +48,7 @@ jobs:
       # Deploy to github pages website
       - uses: JamesIves/github-pages-deploy-action@v4
         with:
-          repository-name: LukeHollandDev/Test
+          repository-name: LukeHollandDev/LukeHollandDev.github.io
           branch: main
           folder: portfolio/dist/
           target-folder: .
