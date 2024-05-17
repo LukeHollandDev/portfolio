@@ -46,7 +46,7 @@ jobs:
           path: portfolio/dist/
 
       # Deploy to github pages website
-      - uses: JamesIves/github-pages-deploy-action@4.1.5
+      - uses: JamesIves/github-pages-deploy-action@4
         with:
           repository-name: LukeHollandDev/LukeHollandDev.github.io
           branch: main
