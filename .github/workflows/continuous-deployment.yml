@@ -56,4 +56,4 @@ jobs:
           folder: portfolio/dist/
           target-folder: .
           clean: false
-          token: ${{ secrets.PAT }}
+          # token: ${{ secrets.PAT }}
