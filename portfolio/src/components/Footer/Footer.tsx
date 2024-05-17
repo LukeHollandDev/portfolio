@@ -10,7 +10,7 @@ function Footer({ socialData }: { socialData: SocialProps }) {
       </p>
       <Social {...socialData} />
       {import.meta.env.VITE_LAST_UPDATED ? (
-        <p>Webiste updated {import.meta.env.VITE_LAST_UPDATED}.</p>
+        <p className="mt-2 text-sm">Website last updated {import.meta.env.VITE_LAST_UPDATED}.</p>
       ) : null}
     </div>
   );

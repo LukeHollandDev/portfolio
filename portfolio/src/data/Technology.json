@@ -15,11 +15,6 @@
         "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
     },
     {
-        "name": "C++",
-        "url": "https://cplusplus.com/",
-        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg"
-    },
-    {
         "name": "Swift",
         "url": "https://developer.apple.com/swift/",
         "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/swift/swift-original.svg"
@@ -45,11 +40,6 @@
         "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
     },
     {
-        "name": "React Native",
-        "url": "https://reactnative.dev/",
-        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
-    },
-    {
         "name": "Angular",
         "url": "https://angular.io/",
         "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg"
@@ -63,6 +53,11 @@
         "name": "FastAPI",
         "url": "https://fastapi.tiangolo.com/",
         "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg"
+    },
+    {
+        "name": "React Native",
+        "url": "https://reactnative.dev/",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
     },
     {
         "name": "Docker",
