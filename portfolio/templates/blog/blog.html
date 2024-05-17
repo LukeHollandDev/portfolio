@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title_block %} Blog {% endblock %}
+
+{% block content %}
+  {% include 'info.html' %} <hr>
+  <div class="lead info-bar content-header">
+    {% if request.user.is_superuser %}
+      <div class="row">
+        <div class="col">
+          Blog
+        </div>
+        <div class="col text-right">
+          <a class="btn btn-custom" href="{% url 'add_blog_post' %}">Create Blog Post</a>
+        </div>
+      </div>
+    {% else %}
+      Blog
+    {% endif %}
+  </div>
+  <div class="info-content">
+    {% if page_obj %}
+      {% for post in page_obj %}
+        <div class="row item-content">
+          <div class="col-sm">
+            <span class="item-title"><a href="{% url 'blog_post' post.id %}" class="link">{{ post.title }}</a></span><br>
+            <span>
+              {% if post.content|length > 120 %}
+                {{ post.content|striptags|safe|slice:"117" }}...
+              {% else %}
+                {{ post.content|striptags|safe }}
+              {% endif %}
+            </span>
+            <div class="item-dates">
+              <span data-toggle="tooltip" title="Post Created">
+                <i class="fas fa-calendar-alt"></i> {{ post.date_created }}
+              </span>
+              <span data-toggle="tooltip" title="Last Updated">
+                <i class="fas fa-arrow-alt-circle-up"></i> {{ post.date_updated }}
+              </span>
+            </div>
+          </div>
+          <div class="col-sm-1 sm-hide">
+            <span data-toggle="tooltip" title="Views">
+            <i class="fas fa-eye"></i> {{ post.views }}
+          </span><br>
+          </div>
+        </div>
+        {% if not forloop.last %} <hr> {% endif %}
+      {% endfor %}
+      <hr>
+      {% include 'pagnation.html' with page_obj=page_obj %}
+    {% else %}
+      <strong>No posts here yet, hmm, probs an error people with blogs always need that obligatory 'hello world' first blog post.
+    {% endif %}
+  </div>
+{% endblock %}

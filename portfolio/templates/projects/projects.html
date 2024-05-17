@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title_block %} Projects {% endblock %}
+
+{% block content %}
+  {% include 'info.html' %} <hr>
+  <div class="lead info-bar content-header">
+    <div class="row">
+      <div class="col">
+        {% if lang %}
+          {{ lang }} Projects
+        {% else %}
+          All Projects
+        {% endif %}
+      </div>
+      <div class="col text-right">
+        <div class="dropdown">
+          <button class="btn btn-custom dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown">
+            Language
+          </button>
+          <div class="dropdown-menu">
+              {% for language in languages %}
+                  <a class="dropdown-item" href="{% url 'projects_lang' language %}">{{ language }}</a>
+              {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="info-content">
+    {% if page_obj %}
+      {% for project in page_obj %}
+        <div class="row item-content">
+          <div class="col-sm-1 text-center sm-hide" data-toggle="tooltip" title="{{ project.language }}">
+            {% if project.language|lower == "html" or project.language|lower == "css" %}
+              <i class="fab fa-html5 fa-4x"></i>
+            {% elif project.language|lower == "javascript" %}
+              <i class="fab fa-js-square fa-4x"></i>
+            {% elif project.language|lower == "dart" %}
+              <img src="{% static 'images/dart.svg' %}" class="img-fluid" style="">
+            {% else %}
+              <i class="fab fa-{{ project.language|lower }} fa-4x"></i>
+            {% endif %}
+          </div>
+          <div class="col-sm">
+            <span class="item-title">
+              <a href="{% url 'project_views' project.name %}" class="link" target="_blank">{{ project.name }}
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+            </span><br>
+            <span>{{ project.description }}</span> <br>
+            <div class="item-dates">
+              <span data-toggle="tooltip" title="Project Created">
+                <i class="fas fa-calendar-alt"></i> {{ project.date_created }}
+              </span>
+              <span data-toggle="tooltip" title="Last Updated">
+                <i class="fas fa-arrow-alt-circle-up"></i> {{ project.date_updated }}
+                </span>
+            </div>
+          </div>
+          <div class="col-sm-2 sm-hide">
+            <span data-toggle="tooltip" title="Views"><i class="fas fa-eye"></i> {{ project.views}}</span><br>
+            <span data-toggle="tooltip" title="Language"><i class="fas fa-code"></i> {{ project.language }}</span>
+          </div>
+        </div>
+        {% if not forloop.last %} <hr> {% endif %}
+      {% endfor %}
+      <hr>
+      {% include 'pagnation.html' with page_obj=page_obj %}
+    {% endif %}
+  </div>
+{% endblock %}

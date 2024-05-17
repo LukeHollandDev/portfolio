@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title_block %} Add Blog Post {% endblock %}
+
+{% block content %}
+  <div class="info-bar content-header">
+    Add Blog Post
+  </div>
+  <div class="info-content">
+    <form id="new_post" method="post" action="{% url 'add_blog_post' %}">
+      {% for message in messages %}
+        <div class="alert alert-danger">
+          <a class="close" href="#" data-dismiss="alert">×</a>
+          {{ message }}
+        </div>
+			{% endfor %}
+      {% csrf_token %}
+      {{ post_form.media }}
+      {{ post_form.title }}
+      <br>
+      {{ post_form.content }}
+      <br>
+      <div class="text-center">
+        <button class="btn btn-custom">Create Post</button>
+      </div>
+    </form>
+  </div>
+{% endblock %}
