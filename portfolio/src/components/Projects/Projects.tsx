@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import "./Project.css";
+import "./Projects.css";
 import { faSquareArrowUpRight } from "@fortawesome/free-solid-svg-icons";
 import { faGitSquare } from "@fortawesome/free-brands-svg-icons";
 
@@ -26,7 +26,7 @@ const ProjectDetails = ({ project }: { project: Project }) => {
         </a>
       </p>
       {project.source ? <p className="text-sm">
-        <a href={project.url} target="_blank" rel="noopener noreferrer">
+        <a href={project.source} target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon icon={faGitSquare} size="xl" />{" "}
           {project.source}
         </a>
@@ -70,12 +70,12 @@ export function Projects({ projects }: { projects: Project[] }) {
           <div key={project.name} className="project grid grid-cols-12 rounded">
             {index % 2 === 0
               ? [
-                <img src={project.image} className="col-span-6" />,
-                <ProjectDetails project={project} />,
+                <img key={`${project.name}_${project.image}`} src={project.image} className="col-span-6" />,
+                <ProjectDetails key={`${project.name}_${index}`} project={project} />,
               ]
               : [
-                <ProjectDetails project={project} />,
-                <img src={project.image} className="col-span-6" />,
+                <ProjectDetails key={`${project.name}_${index}`} project={project} />,
+                <img key={`${project.name}_${project.image}`} src={project.image} className="col-span-6" />,
               ]}
           </div>
         )) : <p>Looks like there is no projects here.</p>}
