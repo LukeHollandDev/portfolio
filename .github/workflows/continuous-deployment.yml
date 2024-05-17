@@ -1,13 +1,12 @@
 name: Continuous Deployment
 
 on:
-  push
-  # workflow_run:
-  #   workflows: ["Continuous Integration"]
-  #   types:
-  #     - completed
-  #   branches:
-  #     - main
+  workflow_run:
+    workflows: ["Continuous Integration"]
+    types:
+      - completed
+    branches:
+      - main
 
 jobs:
   build:
