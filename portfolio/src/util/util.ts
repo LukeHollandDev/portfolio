@@ -2,7 +2,7 @@ export function getEnvValue(name: string) { return import.meta.env[name] }
 
 export function getRelativeTime(timestamp: string) {
     const now = new Date();
-    const past = new Date(timestamp);
+    const past = new Date(timestamp.replace(/-/g, "/"));
     const seconds = Math.floor((now.valueOf() - past.valueOf()) / 1000);
 
     let interval = Math.floor(seconds / 31536000);
