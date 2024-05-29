@@ -12,7 +12,7 @@ function Footer({ socialData }: { socialData: SocialProps }) {
         checkout my social links.
       </p>
       <Social {...socialData} />
-      {timestamp ? (
+      {timestamp && getRelativeTime(timestamp) ? (
         <p className="mt-2 text-sm">
           Website last updated{" "}
           <a href="https://github.com/LukeHollandDev/portfolio" className="underline" target="_blank" rel="noopener noreferrer">
