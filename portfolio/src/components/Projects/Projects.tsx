@@ -80,7 +80,7 @@ export function Projects({ projects }: { projects: Project[] }) {
                     key={`${project.name}_${project.image}`}
                     src={project.image}
                     alt={`${project.name} cover image`}
-                    className="object-cover h-full rounded-tl rounded-tr sm:rounded-tl sm:rounded-bl  sm:rounded-tr-[0]"
+                    className="object-cover rounded-tl rounded-tr sm:rounded-tl sm:rounded-bl  sm:rounded-tr-[0]"
                     loading="lazy"
                   />
                 </a>
