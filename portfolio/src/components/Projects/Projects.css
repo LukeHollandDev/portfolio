@@ -1,6 +1,7 @@
 .project {
     background-color: #487eb0;
     color: white;
+    border: 1px solid #487eb0;
 }
 
 .project-technology {

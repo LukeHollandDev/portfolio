@@ -1,9 +1,26 @@
 [
     {
+        "name": "Book Tracker",
+        "description": "Book Tracker is a minimalist book tracking website designed to help you keep track of books you are reading and have read. The site was designed to be a PWA so you can install it from your browser! I personally use the site to keep track of all my reading habits and always like to add new features.",
+        "image": "/portfolio-assets/project_book_tracker.png",
+        "url": "https://lukeholland.dev/book-tracker/",
+        "technology": [
+            "React",
+            "TypeScript",
+            "PWA",
+            "Go",
+            "PostgreSQL",
+            "Docker"
+        ]
+    },
+    {
         "name": "Freezer ID",
         "description": "Freezer ID is a sleek website which allows users to itemise the meals they have in their freezer to help them keep track of what is in the freezer. I currently use the website daily as we like to cook our meals and often have leftovers we freeze.",
         "image": "/portfolio-assets/project_freezer-id.png",
         "url": "https://freezer.lukeholland.dev",
+        "source": [
+            "https://github.com/LukeHollandDev/freezerid"
+        ],
         "technology": [
             "NextJS",
             "React",
@@ -14,10 +31,27 @@
         ]
     },
     {
+        "name": "Obtainadex",
+        "description": "Obtainadex is a website which was created to help track the completion of a Pokemon form dex. It offers a nice overview to see all your Pokemon, also lets you mark them as own trainer id. You can print out PDFs with checkboxes if you want to physically track.",
+        "image": "/portfolio-assets/project_obtainadex.png",
+        "url": "https://lukeholland.dev/obtainadex/",
+        "source": [
+            "https://github.com/LukeHollandDev/obtainadex"
+        ],
+        "technology": [
+            "React",
+            "TypeScript",
+            "Deno"
+        ]
+    },
+    {
         "name": "Recipe Website",
         "description": "Recipe Website is a simple recipe repository which brings together recipes from a variety of sources. The website allows users to find and view recipes, which includes ingredient lists and instructions, they can also sign up and keep track of their favourite recipes!",
         "image": "/portfolio-assets/project_recipe_website.png",
         "url": "https://recipes.lukeholland.dev",
+        "source": [
+            "https://github.com/LukeHollandDev/recipeswebsite"
+        ],
         "technology": [
             "React",
             "TypeScript",
@@ -33,7 +67,9 @@
         "description": "Algorithm Animator was developed for my final year project at University of Glasgow, it was designed to help students learn graph algorithms by allowing them to create graphs and watch an animation of a graph algorithm.",
         "image": "/portfolio-assets/project_algorithm_animator.png",
         "url": "https://lukeholland.dev/university_project",
-        "source": "https://github.com/LukeHollandDev/algorithm-animator",
+        "source": [
+            "https://github.com/LukeHollandDev/algorithm-animator"
+        ],
         "technology": [
             "React",
             "JavaScript",

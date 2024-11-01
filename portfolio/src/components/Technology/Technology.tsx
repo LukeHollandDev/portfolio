@@ -17,6 +17,7 @@ export function TechnologyIcon({ technology }: { technology: TechnologyItem }) {
           src={technology.icon}
           alt={`${technology.name} Icon`}
           title={`${technology.name}`}
+          loading="lazy"
         />
         <p className="text-xs sm:text-sm text-center mt-2">{technology.name}</p>
       </a>
@@ -43,7 +44,7 @@ export function Technology({
         professionally and in my personal projects.
       </p>
       <p className="text-sm italic">
-        Thank you to{" "}
+        All technology icons are from{" "}
         <a
           className="link"
           href="https://devicon.dev/"
@@ -51,8 +52,8 @@ export function Technology({
           rel="noopener noreferrer"
         >
           Devicon
-        </a>{" "}
-        for the icons!
+        </a>
+        .
       </p>
       <div className="grid grid-cols-10 gap-1 mt-4">
         {technologies.map((technology: TechnologyItem) => (

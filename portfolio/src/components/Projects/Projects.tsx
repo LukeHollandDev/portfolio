@@ -8,13 +8,13 @@ export interface Project {
   description: string;
   image: string;
   url: string;
-  source?: string;
+  source?: string[];
   technology: string[];
 }
 
 const ProjectDetails = ({ project }: { project: Project }) => {
   return (
-    <div className="col-span-12 sm:col-span-6 p-4">
+    <div className="basis-3/5 p-4">
       <h3 className="text-lg sm:text-xl md:text-2xl font-semibold">
         {project.name}
       </h3>
@@ -25,13 +25,14 @@ const ProjectDetails = ({ project }: { project: Project }) => {
           {project.url}
         </a>
       </p>
-      {project.source ? (
-        <p className="text-sm">
-          <a href={project.source} target="_blank" rel="noopener noreferrer">
-            <FontAwesomeIcon icon={faGitSquare} size="xl" /> {project.source}
+      {project.source ?
+        project.source.map((source: string) => <p className="text-sm">
+          <a href={source} target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={faGitSquare} size="xl" /> {source}
           </a>
-        </p>
-      ) : null}
+        </p>)
+        : null
+      }
       <div className="flex flex-wrap gap-2 mt-2">
         {project.technology.map((technology) => (
           <p
@@ -66,38 +67,28 @@ export function Projects({ projects }: { projects: Project[] }) {
         </a>{" "}
         to see all of my open source projects!
       </p>
-      <div className="mt-4">
+      <div className="flex flex-col gap-2 mt-4">
         {projects ? (
           projects.map((project: Project, index) => (
             <div
               key={project.name}
-              className="project grid grid-cols-12 mt-2 sm:mt-0 rounded sm:rounded-none"
+              className="project flex flex-col sm:flex-row rounded"
             >
-              {index % 2 === 0
-                ? [
-                    <img
-                      key={`${project.name}_${project.image}`}
-                      src={project.image}
-                      alt={`${project.name} cover image`}
-                      className="col-span-12 sm:col-span-6 object-cover h-full rounded-t sm:rounded-none"
-                    />,
-                    <ProjectDetails
-                      key={`${project.name}_${index}`}
-                      project={project}
-                    />,
-                  ]
-                : [
-                    <ProjectDetails
-                      key={`${project.name}_${index}`}
-                      project={project}
-                    />,
-                    <img
-                      key={`${project.name}_${project.image}`}
-                      src={project.image}
-                      alt={`${project.name} cover image`}
-                      className="col-span-12 sm:col-span-6 object-cover h-full rounded-b sm:rounded-none"
-                    />,
-                  ]}
+              <div className="basis-2/5 bg-white rounded-tl rounded-tr sm:rounded-tl sm:rounded-bl sm:rounded-tr-[0]">
+                <a href={project.url} target="_blank" rel="noopener noreferrer">
+                  <img
+                    key={`${project.name}_${project.image}`}
+                    src={project.image}
+                    alt={`${project.name} cover image`}
+                    className="object-cover h-full rounded-tl rounded-tr sm:rounded-tl sm:rounded-bl  sm:rounded-tr-[0]"
+                    loading="lazy"
+                  />
+                </a>
+              </div>
+              <ProjectDetails
+                key={`${project.name}_${index}`}
+                project={project}
+              />
             </div>
           ))
         ) : (

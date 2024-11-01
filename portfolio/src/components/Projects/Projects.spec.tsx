@@ -7,7 +7,7 @@ const mockProjects: Project[] = [
     description: "project_one_description",
     image: "project_one_image",
     url: "project_one_url",
-    source: "project_one_source_url",
+    source: ["project_one_source_url"],
     technology: ["React"]
   },
   {
@@ -35,8 +35,10 @@ describe("Projects", () => {
       expect(urlLink).toHaveAttribute('href', project.url);
 
       if (project.source) {
-        const sourceLink = screen.getByRole('link', { name: new RegExp(project.source, 'i') });
-        expect(sourceLink).toHaveAttribute('href', project.source);
+        project.source.forEach(source => {
+          const sourceLink = screen.getByRole('link', { name: new RegExp(source, 'i') });
+          expect(sourceLink).toHaveAttribute('href', source);
+        })
       }
 
       project.technology.forEach((tech) => {
